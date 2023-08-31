@@ -1,0 +1,50 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int parcial1,parcial2,parcial3;
+    float practica,notaparcial,final,nota;
+    
+    cout<<"Ingresar nota del parcial 1: "<<endl;
+    cin>>parcial1;
+    if ((parcial1>=0) && (parcial1<=100))
+    {
+        cout<<"Ingresar nota del parcial 2: "<<endl;
+        cin>>parcial2;
+        if ((parcial2>=0) && (parcial2<=100))
+        {
+            cout<<"Ingresar nota del parcial 3: "<<endl;
+            cin>>parcial3;
+            if ((parcial3>=0) && (parcial3<=100))
+            {
+                cout<<"Ingresar nota practica: "<<endl;
+                cin>>practica;
+                if ((practica>=0) && (practica<=100))
+                {
+                    cout<<"Ingresar nota del examen final: "<<endl;
+                    cin>>final;
+                    if ((final>=0) && (final<=100)) 
+                    {
+                        nota = ((parcial1+parcial2+parcial3)/3*0.40)+(practica*0.20)+(final*0.40);
+                        cout<<"La nota final es: "<<nota;
+                    }
+                }
+                else
+                cout<<"Nota practica invalida";
+            }
+            else
+            cout<<"Nota parcial 3 invalida";
+        }
+        else
+        cout<<"Nota parcial 2 invalida";
+    }
+    else
+    cout<<"Nota parcial 1 invalida";
+
+
+    
+    return 0;
+}
