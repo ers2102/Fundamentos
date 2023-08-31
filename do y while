@@ -1,0 +1,54 @@
+/******************************************************************************
+
+La empresa "XYZ" esta lanzando una promocion de venta de sus productos.
+Si el cliente compra menos de 1000 no tiene ningun descuento.
+Si el cliente compra mayor a 1000 pero menor o igual a 2000 tiene un descuento del 20%.
+Si el cliente compra mayor a 2000 pero menor o igual a 4000 su descuento es del 30%.
+Si el cliente compra mayor a 4000, su descuente es del 50%. Debe mostrar como resultado 
+cuanto pagara el cliente de acuerdo al de sus compras.
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    string nombreCliente;
+    int montoPago,montoAPagar,cantidad,precio;
+    float precio;
+    
+    cout<<"Ingrese nombre del cliente: "; cin>>nombreCliente;
+
+    do {
+        cout<<"Ingresar precio: "; cin>>precio;
+        if (precio = 0){
+            cout<<"Ingrese una precio mayor que 0!!";
+        }
+    } while (precio <= 0);
+    do {
+        cout<<"Ingrese cantidad: "; cin>>cantidad;
+        if (cantidad = 0){
+        cout<<"Ingrese una cantidad mayor que 0!!";
+            
+        }
+    } while (cantidad <= 0);
+    
+        montoPago = cantidad*precio;
+    
+    if (montoPago < 1000){
+        montoAPagar=montoPago;
+    }else if (montoPago > 1000 && montoPago <= 2000){
+        //montoAPagar = montoPago-montoPago*0.20;
+        montoAPagar = montoPago*0.80;
+    }else if (montoPago > 2000 && montoPago < 4000){
+        montoAPagar = montoPago*0.70;
+    }else if (montoPago > 4000){
+        montoAPagar = montoPago*0.50;
+    }
+    
+    cout<<"El cliente "<<nombreCliente<<" debe pagar: "<<montoAPagar;
+    
+
+    return 0;
+}
