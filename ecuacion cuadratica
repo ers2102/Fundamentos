@@ -1,0 +1,49 @@
+
+#include <iostream>
+#include "math.h"
+
+using namespace std;
+
+int main()
+{
+    float a,b,c,d;
+    double x1,x2,x,xr,xi;
+    
+    cout<<"Ingrese a: ";
+    cin>>a;
+    if (a==0)
+        {
+            cout<<"error";
+        }
+        else
+        {
+         cout<<"Ingrese b: ";
+    cin>>b;
+    cout<<"Ingrese c: ";
+    cin>>c;
+    d=pow(b,2)-4*a*c;
+    if (d==0)
+        {
+            x=-b/(2*a);
+            cout<<"la solucion unica es: "<<x;
+        }
+    else
+        if (d>0)
+        {
+            x1=(-b+sqrt(d))/(2*a);
+            x2=(-b-sqrt(d))/(2*a);
+            cout<<"x1: "<<x1<<endl;
+            cout<<"x2: "<<x2<<endl;
+        }
+        else
+        {
+            xr=(-b)/(2*a);
+            xi=sqrt(-d)/(2*a);
+            cout<<"Las soluciones imaginarias son: "<<xr<<"+"<<xi<<"i"<<endl;
+            cout<<"Las soluciones imaginarias son: "<<xr<<"-"<<xi<<"i"<<endl;
+        }
+        }
+
+
+    return 0;
+}
