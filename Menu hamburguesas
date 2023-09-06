@@ -1,0 +1,39 @@
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int cantidad,opcion;
+    float total,precio,pedidototal;
+    
+    while (opcion!=5)
+    {
+        cout<<"Elegir el plato del menu"<<endl;
+        cout<<"1.Hamburguesa 3bs"<<endl;
+        cout<<"2.Hamburguesa con queso 5bs"<<endl;
+        cout<<"3.Papas fritas 2bs"<<endl;
+        cout<<"4.Soda 2.5bs"<<endl;
+        cout<<"5.Terminar pedido"<<endl;
+        cout<<"Elegir la opcion: ";
+        cin>>opcion;
+        cout<<"Elegir la cantidad: ";
+        cin>>cantidad;
+        switch (opcion)
+        {
+            case 1:precio=3;break;
+            case 2:precio=5;break;
+            case 3:precio=2;break;
+            case 4:precio=2.5;break;
+            case 5:cout<<"Pedido finalizado"<<endl;break;
+            default: cout<<"Opcion invalida, utilizar del 1 al 5"<<endl;
+        }
+        total+=precio*cantidad;
+
+    }
+    cout<<"El total a pagar es: "<<total<<"bs"<<endl;
+
+
+    return 0;
+}
