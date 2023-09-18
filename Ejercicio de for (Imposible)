@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+
+// Función para calcular el factorial de un número
+int factorial(int n) {
+  if (n == 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+
+// Función principal
+int main() {
+  // Solicitar al usuario el valor de x
+  double x;
+  cout << "Ingrese el valor de x: ";
+  cin >> x;
+
+  // Solicitar al usuario el valor de n
+  int n;
+  cout << "Ingrese el valor de n: ";
+  cin >> n;
+
+  // Inicializar la variable para almacenar el resultado
+  double s = 0;
+
+  // Iterar sobre los términos de la serie
+  for (int i = 1; i <= n; i += 2) {
+    // Calcular el signo del término
+    int signo = (i % 2 == 0) ? -1 : 1;
+
+    // Calcular el término
+    double t = x * signo / factorial(i);
+
+    // Imprimir el término
+    cout << "Termino " << i << ": " << t << endl;
+
+    // Agregar el término al resultado
+    s += t;
+  }
+
+  // Imprimir el resultado
+  cout << "El valor de la serie es: " << s << endl;
+
+  return 0;
+}
