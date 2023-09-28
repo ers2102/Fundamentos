@@ -1,0 +1,46 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+float calcularFactorial (int x){
+    float fact = 1;
+    for (int i=1; i<=x ; i++){
+        fact=fact*i;
+    }
+    return fact;
+}
+
+int sumarNumerosNaturales(int n){
+    int suma=0;
+    for (int i=1; i<=n ; i++){
+        //suma=suma+i;
+        suma+=i;
+    }
+    return suma;
+}
+
+int division(int n){
+    return calcularFactorial(n)/sumarNumerosNaturales(n);
+}
+
+int exponente(int base, int exponente){
+    return pow(base,exponente);
+}
+
+int main()
+{
+    int const INICIO = 1;
+    int x, terminos, sumaSerie=0;
+    cout<<"Ingrese valor de X: ";
+    cin>>x;
+    cout<<"Cuantos terminos de la serie quiere calcular: ";
+    cin>>terminos;
+    cout<<endl;
+    
+    for(int i = 1; i<=terminos;i++){
+        sumaSerie = sumaSerie + exponente(x,i)/calcularFactorial(i);
+    }
+    
+    cout<<"La suma de la serie es: "<<sumaSerie+INICIO;
+    return 0;
+}
