@@ -1,0 +1,22 @@
+#include <iostream>
+#include "math.h"
+
+float vol_cilindro(float r, float a); //Prototipo - es la cabecera de la funcion
+using namespace std;
+int main() 
+{
+	float radio, altura, volumen;
+	cout << "Ingrese el radio: "<<endl;
+	cin >> radio;
+	cout << "Ingrese la altura: "<<endl;
+	cin >> altura;
+	volumen = vol_cilindro(radio, altura); //La llamada de la funcion
+	cout << "El volumen es: " << volumen;
+	return 0;
+}
+float vol_cilindro(float r, float a)
+{
+	double PI = 3.141516;
+	float v = PI * pow(r, 2) * a;
+	return v;
+}
