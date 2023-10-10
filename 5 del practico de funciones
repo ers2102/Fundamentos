@@ -1,0 +1,36 @@
+
+#include <iostream>
+
+using namespace std;
+
+void sistema(a,b,c,d,e,f,x,&y);
+
+int main()
+{
+    int a,b,c,d,e,f;
+    float x,y;
+    cout<<"Ingresar valor a: ";
+    cin>>a;
+    cout<<"Ingresar valor b: ";
+    cin>>b;
+    cout<<"Ingresar valor c: ";
+    cin>>c;
+    cout<<"Ingresar valor d: ";
+    cin>>d;
+    cout<<"Ingresar valor e: ";
+    cin>>e;
+    cout<<"Ingresar valor f: ";
+    cin>>f;
+    sistema(a,b,c,d,e,f,&x,&y)
+    cout<<"X es: "<<x<<" y Y es: "<<y;
+    
+    return 0;
+}
+
+void sistema(a,b,c,d,e,f,&x,&y)
+{
+    float x,y;
+    x = (b * d * c + a * f) / (a * e - b * d);
+    y = -(d * c + f) / (a * e - b * d);
+    return x;
+}
