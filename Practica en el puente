@@ -1,0 +1,136 @@
+#include <iostream>
+
+using namespace std;
+
+int digito(int n);
+
+int main()
+{
+    int n, resultado;
+    
+    do
+    {
+        cout<<"Ingresar el numero: ";
+        cin>>n;
+        if (n<0)
+        {
+            cout<<"El numero no es valido";
+        } 
+    }
+    while (n<=0);
+        {
+            resultado=digito(n);
+            cout<<"El resultado es: "<<resultado;
+        }
+    return 0;
+}
+
+int digito(int n)
+{
+    int suma=0,dig;
+    
+    while (n!=0)
+    {
+        dig=n%10;
+        suma+=dig;
+        n/=10;
+    }
+    return suma;
+}
+
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+float InvDig (int n);
+
+int main()
+{
+    int n,resultado;
+    cout<<"Ingrese el numero: ";
+    cin>>n;
+    if(n<0)
+    {
+        cout<<"el numero no es valido";
+    }
+    
+    resultado=InvDig(n);
+    cout<<"El numero invertido es: "<<resultado;
+
+    return 0;
+}
+
+float InvDig(int n)
+{
+    int dig,z=0;
+    while(n!=0)
+    {
+        dig=n%10;
+        z=z*10+dig;
+        n/=10;
+    }
+    return z;
+}
+
+
+//Suma de los numeros enteros comprendidos entre 1 y N
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float n,suma=0;
+    do
+    {
+        cout<<"Ingrese el numero n a sumar: ";
+        cin>>n;
+        if (n<1)
+        {
+            cout<<"El numero ingresado debe ser mayor o igual a 1";
+        }
+    } while (n<=1);
+
+    for (int i=0;i<=n;i++)
+    {
+        suma=suma+i;
+    }
+    cout<<"El resultado de la suma es: "<<suma;
+    
+    return 0;
+}
+
+
+
+//Suma de los numeros enteros impares comprendidos entre 1 y N
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    float n,suma=0;
+    do
+    {
+        cout<<"Ingrese el numero n a sumar: ";
+        cin>>n;
+        if (n<1)
+        {
+            cout<<"El numero ingresado debe ser mayor o igual a 1";
+        }
+    } while (n<=1);
+
+    for (int i=1;i<=n;i+=2)
+    {
+        suma=suma+i;
+    }
+    cout<<"El resultado de la suma es: "<<suma;
+    
+    return 0;
+}
