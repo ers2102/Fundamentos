@@ -1,0 +1,45 @@
+//Hacer la suma de los digitos de los numeros
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+  int n;
+  int suma;
+  cin >> n;
+
+  while (n > 0)
+    {
+
+      suma = suma + n % 10;
+      n = n / 10;
+    }
+
+  cout << "La suma es: " << suma;
+
+  return 0;
+}
+
+
+//Mostrar los digitos del numero por separado
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    int numeros;
+    
+    cout<<"Ingrese el numero: ";
+    cin>> n;
+    
+    while (n>0){
+        
+        numeros=n%10;
+        n=n/10;
+        cout<<numeros<<" ";
+    }
+    return 0;
+}
