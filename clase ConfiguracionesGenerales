@@ -1,0 +1,14 @@
+class ConfiguracionesGenerales {
+public:
+    void cambiarContrasena() {
+        // Lógica para cambiar la contraseña
+    }
+
+    void configurarNotificaciones() {
+        // Lógica para configurar preferencias de notificaciones
+    }
+
+    void configurarIdioma() {
+        // Lógica para configurar el idioma y preferencias de la aplicación
+    }
+}
