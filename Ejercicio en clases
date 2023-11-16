@@ -1,0 +1,30 @@
+#include <iostream>
+#define MAX 100
+
+using namespace std;
+
+void cargar (int n, int m,float notas[MAX][MAX]);
+
+int main()
+{
+   int n,m;
+   
+   do{
+    cout<<"Ingresar el valor de la fila: "<<endl;
+    cin>>n;
+   }while(n>MAX);
+   
+   do{
+    cout<<"Ingresar el valor de las columnas: "<<endl;
+    cin>>m;
+   }while(m>MAX);
+
+    cargar (n,m,notas);
+
+    return 0;
+}
+
+void cargar (int n, int m,float notas[MAX][MAX]){
+    
+    
+}
