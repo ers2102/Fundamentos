@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+#include "Usuario.h"
+
+using namespace std;
+
+int main()
+{
+    // Crear objetos de cliente y chofer
+
+    Cliente cliente("RaulQ", "mipassword", "10", "0");
+    Chofer chofer("driver1", "driverpassword", "30", "0");
+
+    // Solicitar inicio de sesión para cliente
+
+    string input_username, input_password;
+    cout << "Ingresa tu nombre de usuario como cliente: ";
+    cin >> input_username;
+    cout << "Ingresa tu contraseña como cliente: ";
+    cin >> input_password;
+
+    if (cliente.verificarLogin(input_username, input_password))
+    {
+        cout << "Inicio de sesión exitoso como cliente." << endl;
+    }
+    else {
+        cout << "Nombre de usuario o contraseña incorrecta como cliente." << endl;
+    }
+
+    // Solicitar inicio de sesión para chofer
+
+    cout << "Ingresa tu nombre de usuario como chofer: ";
+    cin >> input_username;
+    cout << "Ingresa tu contraseña como chofer: ";
+    cin >> input_password;
+
+    if (chofer.verificarLogin(input_username, input_password))
+    {
+        cout << "Inicio de sesión exitoso como chofer." << endl;
+    }
+    else
+    {
+        cout << "Nombre de usuario o contraseña incorrecta como chofer." << endl;
+    }
+
+    return 0;
+}
